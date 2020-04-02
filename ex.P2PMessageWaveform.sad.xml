@@ -2,17 +2,17 @@
 <!DOCTYPE softwareassembly PUBLIC "-//JTRS//DTD SCA V2.2.2 SAD//EN" "softwareassembly.dtd">
 <softwareassembly id="DCE:4bc02b20-2fe8-497c-a416-cbcfe210efbf" name="ex.P2PMessageWaveform">
   <componentfiles>
-    <componentfile id="MessageConsumer_6a29569a-ff11-49b8-b85c-2a6753b1d9df" type="SPD">
-      <localfile name="/components/MessageConsumer/MessageConsumer.spd.xml"/>
+    <componentfile id="ex_c5b3915c-5662-46af-81b2-6e319f2949dc" type="SPD">
+      <localfile name="/components/ex/MessageConsumer/ex.MessageConsumer.spd.xml"/>
     </componentfile>
-    <componentfile id="MessageProducer_d85529b9-2aff-4da7-b970-ebe0eb90f0fe" type="SPD">
-      <localfile name="/components/MessageProducer/MessageProducer.spd.xml"/>
+    <componentfile id="ex_39b7505a-f77b-4950-b0e5-98cff42d9c0a" type="SPD">
+      <localfile name="/components/ex/MessageProducer/ex.MessageProducer.spd.xml"/>
     </componentfile>
   </componentfiles>
   <partitioning>
     <componentplacement>
-      <componentfileref refid="MessageConsumer_6a29569a-ff11-49b8-b85c-2a6753b1d9df"/>
-      <componentinstantiation id="MessageConsumer_1">
+      <componentfileref refid="ex_c5b3915c-5662-46af-81b2-6e319f2949dc"/>
+      <componentinstantiation id="MessageConsumer_1" startorder="0">
         <usagename>MessageConsumer_1</usagename>
         <findcomponent>
           <namingservice name="MessageConsumer_1"/>
@@ -20,7 +20,7 @@
       </componentinstantiation>
     </componentplacement>
     <componentplacement>
-      <componentfileref refid="MessageProducer_d85529b9-2aff-4da7-b970-ebe0eb90f0fe"/>
+      <componentfileref refid="ex_39b7505a-f77b-4950-b0e5-98cff42d9c0a"/>
       <componentinstantiation id="MessageProducer_1" startorder="1">
         <usagename>MessageProducer_1</usagename>
         <findcomponent>
